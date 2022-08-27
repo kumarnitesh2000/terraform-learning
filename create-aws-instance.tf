@@ -13,3 +13,8 @@ resource "aws_instance" "test-server" {
     app = "value"
   } 
 }
+
+# output the public api
+output "ec2_public_ip" {
+    value = aws_instance.test-server.public_ip
+}
